@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIKVAH COLLECTIONS - Jerseys Online</title>
+  <meta name="description" content="Tikvah Collections | Affordable Anime & Football Jerseys in Kenya. Order via WhatsApp & Pay with MPESA." />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #f4f4f4;
+    }
+    header {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      background: #333;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    nav a:hover {
+      background: #ff512f;
+      transform: translateY(-2px);
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e1e1e;
+      border-radius: 14px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      color: #ff512f;
+    }
+    .price {
+      color: #dd2476;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .sizes {
+      margin-bottom: 0.8rem;
+    }
+    select {
+      padding: 0.4rem;
+      border-radius: 6px;
+      border: 1px solid #555;
+      background: #2b2b2b;
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #e03e1a, #b71c5c);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      background: #1e1e1e;
+      color: #aaa;
+    }
+  </style>
+  <script>
+    const WA_NUMBER = '254700000000'; // Replace with your WhatsApp number
+
+    function orderNow(product, price) {
+      const size = document.getElementById(product + '-size').value;
+      const message = `Hello Tikvah Collections, I want to order a ${product} jersey (Size: ${size}) for ${price} Ksh.`;
+      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>TIKVAH COLLECTIONS</h1>
+    <p>Your #1 Stop for Anime & Football Jerseys</p>
+    <nav>
+      <a href="#anime">Anime</a>
+      <a href="#premier">Premier League</a>
+      <a href="#laliga">La Liga</a>
+      <a href="#seriea">Serie A</a>
+      <a href="#bundesliga">Bundesliga</a>
+      <a href="#ligue1">Ligue 1</a>
+      <a href="#national">National Teams</a>
+      <a href="#classic">Classic Retro</a>
+      <a href="#training">Training Kits</a>
+      <a href="#goalkeeper">Goalkeeper Kits</a>
+      <a href="#tracksuits">Tracksuits</a>
+      <a href="#hoodies">Hoodies</a>
+      <a href="#caps">Caps</a>
+      <a href="#socks">Socks</a>
+      <a href="#shorts">Shorts</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Example Product -->
+    <article class="card" id="anime">
+      <img src="anime-jersey.jpg" alt="Anime Jersey" />
+      <div class="card-content">
+        <h3>Anime Jersey</h3>
+        <p class="price">1900 Ksh</p>
+        <div class="sizes">
+          <label for="anime-size">Choose Size:</label>
+          <select id="Anime Jersey-size">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </div>
+        <a href="#" class="btn" onclick="orderNow('Anime Jersey', 1900)">Order via WhatsApp</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TIKVAH COLLECTIONS. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
